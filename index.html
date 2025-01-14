@@ -15,17 +15,26 @@
             background-color: #007BFF;
             padding: 1rem;
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
             position: sticky;
             top: 0;
             z-index: 1000;
         }
-        nav div {
+    
+        .nav-logo {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-decoration: none;
+        }
+    
+        .nav-links {
             display: flex;
             gap: 15px;
         }
-        nav a {
+    
+        .nav-links a {
             padding: 10px 20px;
             border-radius: 20px;
             color: white;
@@ -36,14 +45,53 @@
             transition: all 0.3s ease-in-out;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
         }
-        nav a:hover {
+    
+        .nav-links a:hover {
             background: linear-gradient(45deg, #ff9800, #ff5722);
             box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
             transform: scale(1.1);
         }
-        nav a:active {
-            transform: scale(1.05);
-            box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+    
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+        }
+    
+        .menu-toggle div {
+            width: 30px;
+            height: 3px;
+            background-color: white;
+            border-radius: 5px;
+        }
+    
+        /* Dropdown Menu for Small Screens */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                gap: 10px;
+                background-color: #007BFF;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                padding: 1rem 0;
+            }
+    
+            .nav-links a {
+                padding: 10px;
+                text-align: center;
+            }
+    
+            .menu-toggle {
+                display: flex;
+            }
+    
+            .nav-links.active {
+                display: flex;
+            }
         }
         .title {
             text-align: center;
@@ -93,7 +141,13 @@
 </head>
 <body>
     <nav>
-        <div>
+        <a href="#" class="nav-logo">ICE Badminton</a>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="nav-links">
             <a href="#r1-d1">R1-D1</a>
             <a href="#r1-d2">R1-D2</a>
             <a href="#round-2">Round 2</a>
@@ -219,6 +273,11 @@
         fetchGoogleSheetData('https://docs.google.com/spreadsheets/d/e/2PACX-1vRvjez9m7FBCM6EHUY-X-Vm0uggeWcF6k-Dst3iuYSBcWV9mz2zuGNexsw3WddUU5AEjosbg_h1Jq5f/pub?gid=1585417329&single=true&output=csv', 'semi-final-table');
         fetchGoogleSheetData('https://docs.google.com/spreadsheets/d/e/2PACX-1vRvjez9m7FBCM6EHUY-X-Vm0uggeWcF6k-Dst3iuYSBcWV9mz2zuGNexsw3WddUU5AEjosbg_h1Jq5f/pub?gid=1369959280&single=true&output=csv', 'final-table');
         fetchGoogleSheetData('https://docs.google.com/spreadsheets/d/e/2PACX-1vRvjez9m7FBCM6EHUY-X-Vm0uggeWcF6k-Dst3iuYSBcWV9mz2zuGNexsw3WddUU5AEjosbg_h1Jq5f/pub?gid=1088305643&single=true&output=csv', 'teams-table');
+        
+    function toggleMenu() {
+        const navLinks = document.querySelector('.nav-links');
+        navLinks.classList.toggle('active');
+    }
     </script>
 </body>
 </html>
