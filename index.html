@@ -20,13 +20,22 @@
             position: sticky;
             top: 0;
             z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
     
         .nav-logo {
+            display: flex;
+            align-items: center;
             color: white;
             font-size: 1.5rem;
             font-weight: bold;
             text-decoration: none;
+            gap: 10px; /* Space between the logo and the text */
+        }
+
+        .nav-logo img {
+            height: 60px; /* Adjust the height as needed */
+            width: auto; /* Maintain aspect ratio */
         }
     
         .nav-links {
@@ -136,13 +145,16 @@
         tr:nth-child(odd) td {
             background-color: #ffffff;
         }
-        
+
     </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.1/papaparse.min.js"></script>
 </head>
 <body>
     <nav>
-        <a href="#" class="nav-logo">ICE Badminton</a>
+        <a href="#" class="nav-logo">
+            <img src="images/ICE_LOGO.png" alt="ICE Logo">
+            ICE, RU
+        </a>
         <div class="menu-toggle" onclick="toggleMenu()">
             <div></div>
             <div></div>
@@ -160,7 +172,7 @@
     </nav>
 
     <div class="container">
-        <div class="title">ICE Intra Department Badminton Tournament 2025</div>
+        <div class="title">ICE Intra-Department Badminton Tournament 2025</div>
 
         <div id="quarter-final" class="round-data">
             <div class="round-header">Quarter Final</div>
