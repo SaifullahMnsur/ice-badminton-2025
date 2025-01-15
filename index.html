@@ -136,6 +136,7 @@
         tr:nth-child(odd) td {
             background-color: #ffffff;
         }
+        
     </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.1/papaparse.min.js"></script>
 </head>
@@ -151,7 +152,6 @@
             <a href="#r1-d1">R1-D1</a>
             <a href="#r1-d2">R1-D2</a>
             <a href="#round-2">Round 2</a>
-            <a href="#qualifier">Qualifier</a>
             <a href="#quarter-final">Quarter Final</a>
             <a href="#semi-final">Semi Final</a>
             <a href="#final">Final</a>
@@ -160,39 +160,7 @@
     </nav>
 
     <div class="container">
-        <div class="title">ICE Badminton Tournament 2025</div>
-
-        <div id="r1-d1" class="round-data">
-            <div class="round-header">Round 1 - Day 1</div>
-            <table id="r1-d1-table">
-                <thead></thead>
-                <tbody></tbody>
-            </table>
-        </div>
-
-        <div id="r1-d2" class="round-data">
-            <div class="round-header">Round 1 - Day 2</div>
-            <table id="r1-d2-table">
-                <thead></thead>
-                <tbody></tbody>
-            </table>
-        </div>
-
-        <div id="round-2" class="round-data">
-            <div class="round-header">Round 2 - Day 2</div>
-            <table id="round-2-table">
-                <thead></thead>
-                <tbody></tbody>
-            </table>
-        </div>
-
-        <div id="qualifier" class="round-data">
-            <div class="round-header">Qualifier - Day 2</div>
-            <table id="qualifier-table">
-                <thead></thead>
-                <tbody></tbody>
-            </table>
-        </div>
+        <div class="title">ICE Intra Department Badminton Tournament 2025</div>
 
         <div id="quarter-final" class="round-data">
             <div class="round-header">Quarter Final</div>
@@ -213,6 +181,30 @@
         <div id="final" class="round-data">
             <div class="round-header">Final</div>
             <table id="final-table">
+                <thead></thead>
+                <tbody></tbody>
+            </table>
+        </div>
+
+        <div id="r1-d1" class="round-data">
+            <div class="round-header">Round 1 - Day 1</div>
+            <table id="r1-d1-table">
+                <thead></thead>
+                <tbody></tbody>
+            </table>
+        </div>
+
+        <div id="r1-d2" class="round-data">
+            <div class="round-header">Round 1 - Day 2</div>
+            <table id="r1-d2-table">
+                <thead></thead>
+                <tbody></tbody>
+            </table>
+        </div>
+
+        <div id="round-2" class="round-data">
+            <div class="round-header">Round 2</div>
+            <table id="round-2-table">
                 <thead></thead>
                 <tbody></tbody>
             </table>
@@ -268,7 +260,6 @@
         fetchGoogleSheetData('https://docs.google.com/spreadsheets/d/e/2PACX-1vRvjez9m7FBCM6EHUY-X-Vm0uggeWcF6k-Dst3iuYSBcWV9mz2zuGNexsw3WddUU5AEjosbg_h1Jq5f/pub?gid=0&single=true&output=csv', 'r1-d1-table');
         fetchGoogleSheetData('https://docs.google.com/spreadsheets/d/e/2PACX-1vRvjez9m7FBCM6EHUY-X-Vm0uggeWcF6k-Dst3iuYSBcWV9mz2zuGNexsw3WddUU5AEjosbg_h1Jq5f/pub?gid=384159596&single=true&output=csv', 'r1-d2-table');
         fetchGoogleSheetData('https://docs.google.com/spreadsheets/d/e/2PACX-1vRvjez9m7FBCM6EHUY-X-Vm0uggeWcF6k-Dst3iuYSBcWV9mz2zuGNexsw3WddUU5AEjosbg_h1Jq5f/pub?gid=904433078&single=true&output=csv', 'round-2-table');
-        fetchGoogleSheetData('https://docs.google.com/spreadsheets/d/e/2PACX-1vRvjez9m7FBCM6EHUY-X-Vm0uggeWcF6k-Dst3iuYSBcWV9mz2zuGNexsw3WddUU5AEjosbg_h1Jq5f/pub?gid=748688997&single=true&output=csv', 'qualifier-table');
         fetchGoogleSheetData('https://docs.google.com/spreadsheets/d/e/2PACX-1vRvjez9m7FBCM6EHUY-X-Vm0uggeWcF6k-Dst3iuYSBcWV9mz2zuGNexsw3WddUU5AEjosbg_h1Jq5f/pub?gid=253656585&single=true&output=csv', 'quarter-final-table');
         fetchGoogleSheetData('https://docs.google.com/spreadsheets/d/e/2PACX-1vRvjez9m7FBCM6EHUY-X-Vm0uggeWcF6k-Dst3iuYSBcWV9mz2zuGNexsw3WddUU5AEjosbg_h1Jq5f/pub?gid=1585417329&single=true&output=csv', 'semi-final-table');
         fetchGoogleSheetData('https://docs.google.com/spreadsheets/d/e/2PACX-1vRvjez9m7FBCM6EHUY-X-Vm0uggeWcF6k-Dst3iuYSBcWV9mz2zuGNexsw3WddUU5AEjosbg_h1Jq5f/pub?gid=1369959280&single=true&output=csv', 'final-table');
